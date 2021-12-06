@@ -3,14 +3,10 @@ from typing import List
 from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy.orm import Session
 
-import models
-import crud
-import schemas
-from .database import SessionLocal, engine
-
+from mymodules import crud, models, schemas
+from mymodules.database import SessionLocal, engine
 
 models.Base.metadata.create_all(bind=engine)
-
 
 app = FastAPI()
 
