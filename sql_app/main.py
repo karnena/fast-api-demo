@@ -3,9 +3,9 @@ import jwt
 from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy.orm import Session
 import shelve
-from library import crud,models, schemas
+from sharedlibrary import crud,models, schemas
 
-from library.database import SessionLocal, engine
+from sharedlibrary.database import SessionLocal, engine
 
 models.Base.metadata.create_all(bind=engine)
 

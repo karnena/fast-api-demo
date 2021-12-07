@@ -3,7 +3,7 @@ from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql.sqltypes import TEXT
 
-from library.database import Base
+from sharedlibrary.database import Base
 
 
 class User(Base):
