@@ -13,4 +13,3 @@ class User(Base):
     user_name = Column(TEXT, unique=True, index=True)
     email = Column(TEXT, unique=True, index=True)
     password = Column(TEXT)
-

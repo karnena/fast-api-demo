@@ -59,6 +59,3 @@ def read_item(user_name:str, password:str,db: Session = Depends(get_db)):
 
     else:
         return("login error")
-
-    
-
