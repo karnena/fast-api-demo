@@ -7,7 +7,7 @@ from sharedlibrary.database import Base
 
 
 class User(Base):
-    __tablename__ = "users_details"
+    __tablename__ = "user_detail"
 
     id = Column(Integer, primary_key=True, index=True)
     user_name = Column(TEXT, unique=True, index=True)
