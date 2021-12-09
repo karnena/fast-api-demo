@@ -5,12 +5,19 @@ from sqlalchemy.sql.sqltypes import TEXT,INTEGER
 
 
 
+
 class UserBase(BaseModel):
     email: str
 
+class Data(BaseModel):
+    user_name: str
+    password: str
 
-class User(UserBase):
-    id: int
+    class Config:
+        orm_mode = True
+
+
+class User(BaseModel):
     user_name: str
     email: str
     password: str

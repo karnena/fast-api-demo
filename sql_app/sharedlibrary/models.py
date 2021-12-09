@@ -10,6 +10,6 @@ class User(Base):
     __tablename__ = "user_detail"
 
     id = Column(Integer, primary_key=True, index=True)
-    user_name = Column(TEXT, unique=True, index=True)
-    email = Column(TEXT, unique=True, index=True)
+    user_name = Column(TEXT, unique=True)
+    email = Column(TEXT, unique=True)
     password = Column(TEXT)

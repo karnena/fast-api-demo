@@ -7,9 +7,12 @@ def get_user(db: Session, user_id: int):
     return db.query(models.User).filter(models.User.id == user_id).first()
 
 
-def get_users(db: Session, skip: int = 0, limit: int = 100):
-    return db.query(models.User).offset(skip).limit(limit).all()
+def get_users(db: Session):
+    return db.query(models.User).all()
 
+def create_user(db:Session, request):
+    new_user = request
+    db.add(new_user)
+    db.commit()
+    db.refresh(new_user)
 
-def get_user_name(db: Session, user_name: str):
-    return db.query(models.User).filter(models.User.user_name == user_name).first()
